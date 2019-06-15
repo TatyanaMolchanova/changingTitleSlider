@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamically changing title slider</title>
+    <style>
+        body {
+            background: #3b3d3d;
+        }
+        .wordchanger:before {
+            content: 'humanising';
+            animation-name: mywordchange;
+            -webkit-animation-duration: 4s;
+            -o-animation-duration: 4s;
+            animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -o-animation-timing-function: ease;
+            animation-timing-function: ease;
+            color: #abc9dc;
+        }
+        
+        h1 {
+            font-weight: 800;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 60px;
+            line-height: 0.3;
+            color: #fff;
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes mywordchange {
+            0%{content: 'energising'; opacity: 0.5;}
+            10%{content: 'energising'; opacity: 1;}
+            19%{content: 'energising'; opacity: 0;}
+            20%{content: 'humanasing'; opacity: 0;}
+            30%{content: 'humanasing'; opacity: 1;}
+            39%{content: 'humanasing'; opacity: 0;}
+            40%{content: 'socialising'; opacity: 0;}
+            50%{content: 'socialising'; opacity: 1;}
+            59%{content: 'socialising'; opacity: 0;}
+            60%{content: 'monetising'; opacity: 0;}
+            70%{content: 'monetising'; opacity: 1;}
+            79%{content: 'monetising'; opacity: 0;}
+            80%{content: 'transforming'; opacity: 0;}
+            90%{content: 'transforming'; opacity: 1;}
+            99%{content: 'transforming'; opacity: 0;}
+            100%{content: 'humanasing'; opacity: 0;}
+            
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <h1 class="wordchanger"></h1>
+        <h1>Communication.</h1>
+    </div>
+</body>
+</html>
